@@ -4,4 +4,6 @@ const { vertifyUser, handleUser } = require('../middleware/register.middleware')
 
 const userRouter = new Router({ prefix: '/users' })
 
-userRouter.post('/register', vertifyUser, handleUser, create)
+userRouter.post('/register', vertifyUser, handleUser)
+
+module.exports = userRouter
